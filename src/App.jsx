@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import styles from './Assets/Styles/App.css'
 import Route from './Components/Route'
+import Home from "./Components/Home";
 
 const App = () => {
     return (
@@ -9,7 +10,7 @@ const App = () => {
             <Navbar />
 
             <Route path='/'>
-                {/* home */}
+                <Home />
             </Route>
 
         </div>
