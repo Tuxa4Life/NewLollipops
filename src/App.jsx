@@ -4,6 +4,7 @@ import styles from './Assets/Styles/App.css'
 import Route from './Components/Route'
 import Home from "./Components/Home";
 import Location from "./Components/Location";
+import Gallery from "./Components/Gallery";
 
 const App = () => {
     return (
@@ -18,6 +19,9 @@ const App = () => {
             </Route>
             <Route path='/location'>
                 <Location />
+            </Route>
+            <Route path='/gallery'>
+                <Gallery />
             </Route>
 
         </div>

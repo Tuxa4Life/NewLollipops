@@ -5,6 +5,7 @@ import PriceCard from "./PriceCard";
 
 const Home = () => {
     const [priceCard, setPriceCard] = useState(false)
+
     const [data, setData] = useState([
         {
             header: 'ფასები',
@@ -15,7 +16,12 @@ const Home = () => {
         {
             header: 'გალერეა',
             btn: 'გახსნა',
-            func: () => window.location.href = 'https://www.facebook.com/lollipopsstudiorustavi',
+            func: () => {
+                window.history.pushState({}, '', '/gallery')
+
+                const navEvent = new PopStateEvent('popstate')
+                window.dispatchEvent(navEvent)
+            },
             img: 'https://scontent.ftbs5-2.fna.fbcdn.net/v/t39.30808-6/311595696_547633674030292_6057187144871349001_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHRwStZOu-RuH1cJSFkm_ueq-9Nm6oXWBur702bqhdYG2squ1zSi-cO5l6RvTTi9sMldMxV-OQR5I1RuFsoDD7B&_nc_ohc=jOtho1E20xQAX92Dn_4&_nc_ht=scontent.ftbs5-2.fna&oh=00_AfDDtYPzU9x3uiu5C07TWoALceF0YG74VYbH3VB15Rb_Cw&oe=637F11C8'
         },
         {
@@ -31,6 +37,8 @@ const Home = () => {
             img: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t39.30808-6/314372539_568531481940511_2847317218502150683_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGOMa8Pm3qHR-8KW34-za7eYlerstpwLMViV6uy2nAsxURJkkh6Hesmf18y7Y4ZNwaAV-8IGKKpWC1_jXLUghkj&_nc_ohc=FlOWf1ag-hEAX9S86O_&_nc_ht=scontent.ftbs5-3.fna&oh=00_AfCrVUZREZEWv3FeJotbz6ZhjOMKVg-cZh0Uta3KehOLoQ&oe=637EAC4F'
         },
     ])
+
+
 
     return (
         <main style={styles}>
