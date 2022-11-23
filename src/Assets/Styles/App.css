@@ -132,7 +132,7 @@ body {
         font-size: 16px;
     }
     .priceCard .desc p {
-        font-size: 22px !important;
+        font-size: 19px !important;
     }
     .priceCard ul {
         font-size: 16px !important;
@@ -144,7 +144,7 @@ body {
 }
 
 .gallery {
-    margin-top: 50px;
+    margin-top: 50px9;
     width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
